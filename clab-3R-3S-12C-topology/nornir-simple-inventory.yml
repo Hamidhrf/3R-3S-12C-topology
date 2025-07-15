@@ -1,0 +1,91 @@
+---
+S1:
+    username: admin
+    password: admin
+    platform: arista_ceos
+    hostname: 172.20.20.97
+S2:
+    username: admin
+    password: admin
+    platform: arista_ceos
+    hostname: 172.20.20.105
+S3:
+    username: admin
+    password: admin
+    platform: arista_ceos
+    hostname: 172.20.20.101
+C1:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.100
+C10:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.104
+C11:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.89
+C12:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.93
+C2:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.96
+C3:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.95
+C4:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.92
+C5:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.91
+C6:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.99
+C7:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.90
+C8:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.88
+C9:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.98
+R1:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.102
+R2:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.94
+R3:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.103
