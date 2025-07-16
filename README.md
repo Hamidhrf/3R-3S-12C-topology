@@ -13,14 +13,12 @@ This project simulates a multi-area OSPF network topology using [Containerlab](h
 - Clients connect to switches but are configured with static IPs for testing.
 - Switches use the Arista cEOS image to simulate L2 behavior.
 
-  <img width="778" height="603" alt="Screenshot 2025-07-16 at 10 22 07 AM" src="https://github.com/user-attachments/assets/5fc84326-708d-493f-bf5d-9134e89d3fc2" />
-
 
 ###  Topology Graph
 
 A visual representation of the network topology:
 
-*(Add your topology graph screenshot here)*
+<img width="778" height="603" alt="Screenshot 2025-07-16 at 10 22 07 AM" src="https://github.com/user-attachments/assets/5fc84326-708d-493f-bf5d-9134e89d3fc2" />
 
 ---
 
