@@ -12,40 +12,40 @@ all:
         ansible_password: admin
       hosts:
         clab-3R-3S-12C-topology-S1:
-          ansible_host: 172.20.20.97
+          ansible_host: 172.20.20.94
         clab-3R-3S-12C-topology-S2:
-          ansible_host: 172.20.20.105
+          ansible_host: 172.20.20.97
         clab-3R-3S-12C-topology-S3:
-          ansible_host: 172.20.20.101
+          ansible_host: 172.20.20.88
     linux:
       hosts:
         clab-3R-3S-12C-topology-C1:
-          ansible_host: 172.20.20.100
+          ansible_host: 172.20.20.101
         clab-3R-3S-12C-topology-C10:
-          ansible_host: 172.20.20.104
-        clab-3R-3S-12C-topology-C11:
-          ansible_host: 172.20.20.89
-        clab-3R-3S-12C-topology-C12:
-          ansible_host: 172.20.20.93
-        clab-3R-3S-12C-topology-C2:
-          ansible_host: 172.20.20.96
-        clab-3R-3S-12C-topology-C3:
-          ansible_host: 172.20.20.95
-        clab-3R-3S-12C-topology-C4:
           ansible_host: 172.20.20.92
-        clab-3R-3S-12C-topology-C5:
-          ansible_host: 172.20.20.91
-        clab-3R-3S-12C-topology-C6:
+        clab-3R-3S-12C-topology-C11:
+          ansible_host: 172.20.20.100
+        clab-3R-3S-12C-topology-C12:
           ansible_host: 172.20.20.99
-        clab-3R-3S-12C-topology-C7:
+        clab-3R-3S-12C-topology-C2:
+          ansible_host: 172.20.20.91
+        clab-3R-3S-12C-topology-C3:
+          ansible_host: 172.20.20.93
+        clab-3R-3S-12C-topology-C4:
+          ansible_host: 172.20.20.105
+        clab-3R-3S-12C-topology-C5:
           ansible_host: 172.20.20.90
+        clab-3R-3S-12C-topology-C6:
+          ansible_host: 172.20.20.95
+        clab-3R-3S-12C-topology-C7:
+          ansible_host: 172.20.20.104
         clab-3R-3S-12C-topology-C8:
-          ansible_host: 172.20.20.88
+          ansible_host: 172.20.20.89
         clab-3R-3S-12C-topology-C9:
           ansible_host: 172.20.20.98
         clab-3R-3S-12C-topology-R1:
-          ansible_host: 172.20.20.102
+          ansible_host: 172.20.20.96
         clab-3R-3S-12C-topology-R2:
-          ansible_host: 172.20.20.94
-        clab-3R-3S-12C-topology-R3:
           ansible_host: 172.20.20.103
+        clab-3R-3S-12C-topology-R3:
+          ansible_host: 172.20.20.102

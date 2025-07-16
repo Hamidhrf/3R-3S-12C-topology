@@ -1,159 +1,61 @@
 #!/bin/bash
 echo "Testing full client-to-client ping matrix..."
 echo
-echo "From C1:"
-docker exec -i clab-3R-3S-12C-topology-C1 ping -c 1 -W 1 10.0.1.3 &> /dev/null && echo "  → C2 (10.0.1.3): Success" || echo "  → C2 (10.0.1.3): Failure"
-docker exec -i clab-3R-3S-12C-topology-C1 ping -c 1 -W 1 10.0.1.4 &> /dev/null && echo "  → C3 (10.0.1.4): Success" || echo "  → C3 (10.0.1.4): Failure"
-docker exec -i clab-3R-3S-12C-topology-C1 ping -c 1 -W 1 10.0.1.5 &> /dev/null && echo "  → C4 (10.0.1.5): Success" || echo "  → C4 (10.0.1.5): Failure"
-docker exec -i clab-3R-3S-12C-topology-C1 ping -c 1 -W 1 10.0.1.18 &> /dev/null && echo "  → C5 (10.0.1.18): Success" || echo "  → C5 (10.0.1.18): Failure"
-docker exec -i clab-3R-3S-12C-topology-C1 ping -c 1 -W 1 10.0.1.19 &> /dev/null && echo "  → C6 (10.0.1.19): Success" || echo "  → C6 (10.0.1.19): Failure"
-docker exec -i clab-3R-3S-12C-topology-C1 ping -c 1 -W 1 10.0.1.20 &> /dev/null && echo "  → C7 (10.0.1.20): Success" || echo "  → C7 (10.0.1.20): Failure"
-docker exec -i clab-3R-3S-12C-topology-C1 ping -c 1 -W 1 10.0.1.21 &> /dev/null && echo "  → C8 (10.0.1.21): Success" || echo "  → C8 (10.0.1.21): Failure"
-docker exec -i clab-3R-3S-12C-topology-C1 ping -c 1 -W 1 10.0.1.34 &> /dev/null && echo "  → C9 (10.0.1.34): Success" || echo "  → C9 (10.0.1.34): Failure"
-docker exec -i clab-3R-3S-12C-topology-C1 ping -c 1 -W 1 10.0.1.35 &> /dev/null && echo "  → C10 (10.0.1.35): Success" || echo "  → C10 (10.0.1.35): Failure"
-docker exec -i clab-3R-3S-12C-topology-C1 ping -c 1 -W 1 10.0.1.36 &> /dev/null && echo "  → C11 (10.0.1.36): Success" || echo "  → C11 (10.0.1.36): Failure"
-docker exec -i clab-3R-3S-12C-topology-C1 ping -c 1 -W 1 10.0.1.37 &> /dev/null && echo "  → C12 (10.0.1.37): Success" || echo "  → C12 (10.0.1.37): Failure"
-echo
-echo "From C2:"
-docker exec -i clab-3R-3S-12C-topology-C2 ping -c 1 -W 1 10.0.1.2 &> /dev/null && echo "  → C1 (10.0.1.2): Success" || echo "  → C1 (10.0.1.2): Failure"
-docker exec -i clab-3R-3S-12C-topology-C2 ping -c 1 -W 1 10.0.1.4 &> /dev/null && echo "  → C3 (10.0.1.4): Success" || echo "  → C3 (10.0.1.4): Failure"
-docker exec -i clab-3R-3S-12C-topology-C2 ping -c 1 -W 1 10.0.1.5 &> /dev/null && echo "  → C4 (10.0.1.5): Success" || echo "  → C4 (10.0.1.5): Failure"
-docker exec -i clab-3R-3S-12C-topology-C2 ping -c 1 -W 1 10.0.1.18 &> /dev/null && echo "  → C5 (10.0.1.18): Success" || echo "  → C5 (10.0.1.18): Failure"
-docker exec -i clab-3R-3S-12C-topology-C2 ping -c 1 -W 1 10.0.1.19 &> /dev/null && echo "  → C6 (10.0.1.19): Success" || echo "  → C6 (10.0.1.19): Failure"
-docker exec -i clab-3R-3S-12C-topology-C2 ping -c 1 -W 1 10.0.1.20 &> /dev/null && echo "  → C7 (10.0.1.20): Success" || echo "  → C7 (10.0.1.20): Failure"
-docker exec -i clab-3R-3S-12C-topology-C2 ping -c 1 -W 1 10.0.1.21 &> /dev/null && echo "  → C8 (10.0.1.21): Success" || echo "  → C8 (10.0.1.21): Failure"
-docker exec -i clab-3R-3S-12C-topology-C2 ping -c 1 -W 1 10.0.1.34 &> /dev/null && echo "  → C9 (10.0.1.34): Success" || echo "  → C9 (10.0.1.34): Failure"
-docker exec -i clab-3R-3S-12C-topology-C2 ping -c 1 -W 1 10.0.1.35 &> /dev/null && echo "  → C10 (10.0.1.35): Success" || echo "  → C10 (10.0.1.35): Failure"
-docker exec -i clab-3R-3S-12C-topology-C2 ping -c 1 -W 1 10.0.1.36 &> /dev/null && echo "  → C11 (10.0.1.36): Success" || echo "  → C11 (10.0.1.36): Failure"
-docker exec -i clab-3R-3S-12C-topology-C2 ping -c 1 -W 1 10.0.1.37 &> /dev/null && echo "  → C12 (10.0.1.37): Success" || echo "  → C12 (10.0.1.37): Failure"
-echo
-echo "From C3:"
-docker exec -i clab-3R-3S-12C-topology-C3 ping -c 1 -W 1 10.0.1.2 &> /dev/null && echo "  → C1 (10.0.1.2): Success" || echo "  → C1 (10.0.1.2): Failure"
-docker exec -i clab-3R-3S-12C-topology-C3 ping -c 1 -W 1 10.0.1.3 &> /dev/null && echo "  → C2 (10.0.1.3): Success" || echo "  → C2 (10.0.1.3): Failure"
-docker exec -i clab-3R-3S-12C-topology-C3 ping -c 1 -W 1 10.0.1.5 &> /dev/null && echo "  → C4 (10.0.1.5): Success" || echo "  → C4 (10.0.1.5): Failure"
-docker exec -i clab-3R-3S-12C-topology-C3 ping -c 1 -W 1 10.0.1.18 &> /dev/null && echo "  → C5 (10.0.1.18): Success" || echo "  → C5 (10.0.1.18): Failure"
-docker exec -i clab-3R-3S-12C-topology-C3 ping -c 1 -W 1 10.0.1.19 &> /dev/null && echo "  → C6 (10.0.1.19): Success" || echo "  → C6 (10.0.1.19): Failure"
-docker exec -i clab-3R-3S-12C-topology-C3 ping -c 1 -W 1 10.0.1.20 &> /dev/null && echo "  → C7 (10.0.1.20): Success" || echo "  → C7 (10.0.1.20): Failure"
-docker exec -i clab-3R-3S-12C-topology-C3 ping -c 1 -W 1 10.0.1.21 &> /dev/null && echo "  → C8 (10.0.1.21): Success" || echo "  → C8 (10.0.1.21): Failure"
-docker exec -i clab-3R-3S-12C-topology-C3 ping -c 1 -W 1 10.0.1.34 &> /dev/null && echo "  → C9 (10.0.1.34): Success" || echo "  → C9 (10.0.1.34): Failure"
-docker exec -i clab-3R-3S-12C-topology-C3 ping -c 1 -W 1 10.0.1.35 &> /dev/null && echo "  → C10 (10.0.1.35): Success" || echo "  → C10 (10.0.1.35): Failure"
-docker exec -i clab-3R-3S-12C-topology-C3 ping -c 1 -W 1 10.0.1.36 &> /dev/null && echo "  → C11 (10.0.1.36): Success" || echo "  → C11 (10.0.1.36): Failure"
-docker exec -i clab-3R-3S-12C-topology-C3 ping -c 1 -W 1 10.0.1.37 &> /dev/null && echo "  → C12 (10.0.1.37): Success" || echo "  → C12 (10.0.1.37): Failure"
-echo
-echo "From C4:"
-docker exec -i clab-3R-3S-12C-topology-C4 ping -c 1 -W 1 10.0.1.2 &> /dev/null && echo "  → C1 (10.0.1.2): Success" || echo "  → C1 (10.0.1.2): Failure"
-docker exec -i clab-3R-3S-12C-topology-C4 ping -c 1 -W 1 10.0.1.3 &> /dev/null && echo "  → C2 (10.0.1.3): Success" || echo "  → C2 (10.0.1.3): Failure"
-docker exec -i clab-3R-3S-12C-topology-C4 ping -c 1 -W 1 10.0.1.4 &> /dev/null && echo "  → C3 (10.0.1.4): Success" || echo "  → C3 (10.0.1.4): Failure"
-docker exec -i clab-3R-3S-12C-topology-C4 ping -c 1 -W 1 10.0.1.18 &> /dev/null && echo "  → C5 (10.0.1.18): Success" || echo "  → C5 (10.0.1.18): Failure"
-docker exec -i clab-3R-3S-12C-topology-C4 ping -c 1 -W 1 10.0.1.19 &> /dev/null && echo "  → C6 (10.0.1.19): Success" || echo "  → C6 (10.0.1.19): Failure"
-docker exec -i clab-3R-3S-12C-topology-C4 ping -c 1 -W 1 10.0.1.20 &> /dev/null && echo "  → C7 (10.0.1.20): Success" || echo "  → C7 (10.0.1.20): Failure"
-docker exec -i clab-3R-3S-12C-topology-C4 ping -c 1 -W 1 10.0.1.21 &> /dev/null && echo "  → C8 (10.0.1.21): Success" || echo "  → C8 (10.0.1.21): Failure"
-docker exec -i clab-3R-3S-12C-topology-C4 ping -c 1 -W 1 10.0.1.34 &> /dev/null && echo "  → C9 (10.0.1.34): Success" || echo "  → C9 (10.0.1.34): Failure"
-docker exec -i clab-3R-3S-12C-topology-C4 ping -c 1 -W 1 10.0.1.35 &> /dev/null && echo "  → C10 (10.0.1.35): Success" || echo "  → C10 (10.0.1.35): Failure"
-docker exec -i clab-3R-3S-12C-topology-C4 ping -c 1 -W 1 10.0.1.36 &> /dev/null && echo "  → C11 (10.0.1.36): Success" || echo "  → C11 (10.0.1.36): Failure"
-docker exec -i clab-3R-3S-12C-topology-C4 ping -c 1 -W 1 10.0.1.37 &> /dev/null && echo "  → C12 (10.0.1.37): Success" || echo "  → C12 (10.0.1.37): Failure"
-echo
-echo "From C5:"
-docker exec -i clab-3R-3S-12C-topology-C5 ping -c 1 -W 1 10.0.1.2 &> /dev/null && echo "  → C1 (10.0.1.2): Success" || echo "  → C1 (10.0.1.2): Failure"
-docker exec -i clab-3R-3S-12C-topology-C5 ping -c 1 -W 1 10.0.1.3 &> /dev/null && echo "  → C2 (10.0.1.3): Success" || echo "  → C2 (10.0.1.3): Failure"
-docker exec -i clab-3R-3S-12C-topology-C5 ping -c 1 -W 1 10.0.1.4 &> /dev/null && echo "  → C3 (10.0.1.4): Success" || echo "  → C3 (10.0.1.4): Failure"
-docker exec -i clab-3R-3S-12C-topology-C5 ping -c 1 -W 1 10.0.1.5 &> /dev/null && echo "  → C4 (10.0.1.5): Success" || echo "  → C4 (10.0.1.5): Failure"
-docker exec -i clab-3R-3S-12C-topology-C5 ping -c 1 -W 1 10.0.1.19 &> /dev/null && echo "  → C6 (10.0.1.19): Success" || echo "  → C6 (10.0.1.19): Failure"
-docker exec -i clab-3R-3S-12C-topology-C5 ping -c 1 -W 1 10.0.1.20 &> /dev/null && echo "  → C7 (10.0.1.20): Success" || echo "  → C7 (10.0.1.20): Failure"
-docker exec -i clab-3R-3S-12C-topology-C5 ping -c 1 -W 1 10.0.1.21 &> /dev/null && echo "  → C8 (10.0.1.21): Success" || echo "  → C8 (10.0.1.21): Failure"
-docker exec -i clab-3R-3S-12C-topology-C5 ping -c 1 -W 1 10.0.1.34 &> /dev/null && echo "  → C9 (10.0.1.34): Success" || echo "  → C9 (10.0.1.34): Failure"
-docker exec -i clab-3R-3S-12C-topology-C5 ping -c 1 -W 1 10.0.1.35 &> /dev/null && echo "  → C10 (10.0.1.35): Success" || echo "  → C10 (10.0.1.35): Failure"
-docker exec -i clab-3R-3S-12C-topology-C5 ping -c 1 -W 1 10.0.1.36 &> /dev/null && echo "  → C11 (10.0.1.36): Success" || echo "  → C11 (10.0.1.36): Failure"
-docker exec -i clab-3R-3S-12C-topology-C5 ping -c 1 -W 1 10.0.1.37 &> /dev/null && echo "  → C12 (10.0.1.37): Success" || echo "  → C12 (10.0.1.37): Failure"
-echo
-echo "From C6:"
-docker exec -i clab-3R-3S-12C-topology-C6 ping -c 1 -W 1 10.0.1.2 &> /dev/null && echo "  → C1 (10.0.1.2): Success" || echo "  → C1 (10.0.1.2): Failure"
-docker exec -i clab-3R-3S-12C-topology-C6 ping -c 1 -W 1 10.0.1.3 &> /dev/null && echo "  → C2 (10.0.1.3): Success" || echo "  → C2 (10.0.1.3): Failure"
-docker exec -i clab-3R-3S-12C-topology-C6 ping -c 1 -W 1 10.0.1.4 &> /dev/null && echo "  → C3 (10.0.1.4): Success" || echo "  → C3 (10.0.1.4): Failure"
-docker exec -i clab-3R-3S-12C-topology-C6 ping -c 1 -W 1 10.0.1.5 &> /dev/null && echo "  → C4 (10.0.1.5): Success" || echo "  → C4 (10.0.1.5): Failure"
-docker exec -i clab-3R-3S-12C-topology-C6 ping -c 1 -W 1 10.0.1.18 &> /dev/null && echo "  → C5 (10.0.1.18): Success" || echo "  → C5 (10.0.1.18): Failure"
-docker exec -i clab-3R-3S-12C-topology-C6 ping -c 1 -W 1 10.0.1.20 &> /dev/null && echo "  → C7 (10.0.1.20): Success" || echo "  → C7 (10.0.1.20): Failure"
-docker exec -i clab-3R-3S-12C-topology-C6 ping -c 1 -W 1 10.0.1.21 &> /dev/null && echo "  → C8 (10.0.1.21): Success" || echo "  → C8 (10.0.1.21): Failure"
-docker exec -i clab-3R-3S-12C-topology-C6 ping -c 1 -W 1 10.0.1.34 &> /dev/null && echo "  → C9 (10.0.1.34): Success" || echo "  → C9 (10.0.1.34): Failure"
-docker exec -i clab-3R-3S-12C-topology-C6 ping -c 1 -W 1 10.0.1.35 &> /dev/null && echo "  → C10 (10.0.1.35): Success" || echo "  → C10 (10.0.1.35): Failure"
-docker exec -i clab-3R-3S-12C-topology-C6 ping -c 1 -W 1 10.0.1.36 &> /dev/null && echo "  → C11 (10.0.1.36): Success" || echo "  → C11 (10.0.1.36): Failure"
-docker exec -i clab-3R-3S-12C-topology-C6 ping -c 1 -W 1 10.0.1.37 &> /dev/null && echo "  → C12 (10.0.1.37): Success" || echo "  → C12 (10.0.1.37): Failure"
-echo
-echo "From C7:"
-docker exec -i clab-3R-3S-12C-topology-C7 ping -c 1 -W 1 10.0.1.2 &> /dev/null && echo "  → C1 (10.0.1.2): Success" || echo "  → C1 (10.0.1.2): Failure"
-docker exec -i clab-3R-3S-12C-topology-C7 ping -c 1 -W 1 10.0.1.3 &> /dev/null && echo "  → C2 (10.0.1.3): Success" || echo "  → C2 (10.0.1.3): Failure"
-docker exec -i clab-3R-3S-12C-topology-C7 ping -c 1 -W 1 10.0.1.4 &> /dev/null && echo "  → C3 (10.0.1.4): Success" || echo "  → C3 (10.0.1.4): Failure"
-docker exec -i clab-3R-3S-12C-topology-C7 ping -c 1 -W 1 10.0.1.5 &> /dev/null && echo "  → C4 (10.0.1.5): Success" || echo "  → C4 (10.0.1.5): Failure"
-docker exec -i clab-3R-3S-12C-topology-C7 ping -c 1 -W 1 10.0.1.18 &> /dev/null && echo "  → C5 (10.0.1.18): Success" || echo "  → C5 (10.0.1.18): Failure"
-docker exec -i clab-3R-3S-12C-topology-C7 ping -c 1 -W 1 10.0.1.19 &> /dev/null && echo "  → C6 (10.0.1.19): Success" || echo "  → C6 (10.0.1.19): Failure"
-docker exec -i clab-3R-3S-12C-topology-C7 ping -c 1 -W 1 10.0.1.21 &> /dev/null && echo "  → C8 (10.0.1.21): Success" || echo "  → C8 (10.0.1.21): Failure"
-docker exec -i clab-3R-3S-12C-topology-C7 ping -c 1 -W 1 10.0.1.34 &> /dev/null && echo "  → C9 (10.0.1.34): Success" || echo "  → C9 (10.0.1.34): Failure"
-docker exec -i clab-3R-3S-12C-topology-C7 ping -c 1 -W 1 10.0.1.35 &> /dev/null && echo "  → C10 (10.0.1.35): Success" || echo "  → C10 (10.0.1.35): Failure"
-docker exec -i clab-3R-3S-12C-topology-C7 ping -c 1 -W 1 10.0.1.36 &> /dev/null && echo "  → C11 (10.0.1.36): Success" || echo "  → C11 (10.0.1.36): Failure"
-docker exec -i clab-3R-3S-12C-topology-C7 ping -c 1 -W 1 10.0.1.37 &> /dev/null && echo "  → C12 (10.0.1.37): Success" || echo "  → C12 (10.0.1.37): Failure"
-echo
-echo "From C8:"
-docker exec -i clab-3R-3S-12C-topology-C8 ping -c 1 -W 1 10.0.1.2 &> /dev/null && echo "  → C1 (10.0.1.2): Success" || echo "  → C1 (10.0.1.2): Failure"
-docker exec -i clab-3R-3S-12C-topology-C8 ping -c 1 -W 1 10.0.1.3 &> /dev/null && echo "  → C2 (10.0.1.3): Success" || echo "  → C2 (10.0.1.3): Failure"
-docker exec -i clab-3R-3S-12C-topology-C8 ping -c 1 -W 1 10.0.1.4 &> /dev/null && echo "  → C3 (10.0.1.4): Success" || echo "  → C3 (10.0.1.4): Failure"
-docker exec -i clab-3R-3S-12C-topology-C8 ping -c 1 -W 1 10.0.1.5 &> /dev/null && echo "  → C4 (10.0.1.5): Success" || echo "  → C4 (10.0.1.5): Failure"
-docker exec -i clab-3R-3S-12C-topology-C8 ping -c 1 -W 1 10.0.1.18 &> /dev/null && echo "  → C5 (10.0.1.18): Success" || echo "  → C5 (10.0.1.18): Failure"
-docker exec -i clab-3R-3S-12C-topology-C8 ping -c 1 -W 1 10.0.1.19 &> /dev/null && echo "  → C6 (10.0.1.19): Success" || echo "  → C6 (10.0.1.19): Failure"
-docker exec -i clab-3R-3S-12C-topology-C8 ping -c 1 -W 1 10.0.1.20 &> /dev/null && echo "  → C7 (10.0.1.20): Success" || echo "  → C7 (10.0.1.20): Failure"
-docker exec -i clab-3R-3S-12C-topology-C8 ping -c 1 -W 1 10.0.1.34 &> /dev/null && echo "  → C9 (10.0.1.34): Success" || echo "  → C9 (10.0.1.34): Failure"
-docker exec -i clab-3R-3S-12C-topology-C8 ping -c 1 -W 1 10.0.1.35 &> /dev/null && echo "  → C10 (10.0.1.35): Success" || echo "  → C10 (10.0.1.35): Failure"
-docker exec -i clab-3R-3S-12C-topology-C8 ping -c 1 -W 1 10.0.1.36 &> /dev/null && echo "  → C11 (10.0.1.36): Success" || echo "  → C11 (10.0.1.36): Failure"
-docker exec -i clab-3R-3S-12C-topology-C8 ping -c 1 -W 1 10.0.1.37 &> /dev/null && echo "  → C12 (10.0.1.37): Success" || echo "  → C12 (10.0.1.37): Failure"
-echo
-echo "From C9:"
-docker exec -i clab-3R-3S-12C-topology-C9 ping -c 1 -W 1 10.0.1.2 &> /dev/null && echo "  → C1 (10.0.1.2): Success" || echo "  → C1 (10.0.1.2): Failure"
-docker exec -i clab-3R-3S-12C-topology-C9 ping -c 1 -W 1 10.0.1.3 &> /dev/null && echo "  → C2 (10.0.1.3): Success" || echo "  → C2 (10.0.1.3): Failure"
-docker exec -i clab-3R-3S-12C-topology-C9 ping -c 1 -W 1 10.0.1.4 &> /dev/null && echo "  → C3 (10.0.1.4): Success" || echo "  → C3 (10.0.1.4): Failure"
-docker exec -i clab-3R-3S-12C-topology-C9 ping -c 1 -W 1 10.0.1.5 &> /dev/null && echo "  → C4 (10.0.1.5): Success" || echo "  → C4 (10.0.1.5): Failure"
-docker exec -i clab-3R-3S-12C-topology-C9 ping -c 1 -W 1 10.0.1.18 &> /dev/null && echo "  → C5 (10.0.1.18): Success" || echo "  → C5 (10.0.1.18): Failure"
-docker exec -i clab-3R-3S-12C-topology-C9 ping -c 1 -W 1 10.0.1.19 &> /dev/null && echo "  → C6 (10.0.1.19): Success" || echo "  → C6 (10.0.1.19): Failure"
-docker exec -i clab-3R-3S-12C-topology-C9 ping -c 1 -W 1 10.0.1.20 &> /dev/null && echo "  → C7 (10.0.1.20): Success" || echo "  → C7 (10.0.1.20): Failure"
-docker exec -i clab-3R-3S-12C-topology-C9 ping -c 1 -W 1 10.0.1.21 &> /dev/null && echo "  → C8 (10.0.1.21): Success" || echo "  → C8 (10.0.1.21): Failure"
-docker exec -i clab-3R-3S-12C-topology-C9 ping -c 1 -W 1 10.0.1.35 &> /dev/null && echo "  → C10 (10.0.1.35): Success" || echo "  → C10 (10.0.1.35): Failure"
-docker exec -i clab-3R-3S-12C-topology-C9 ping -c 1 -W 1 10.0.1.36 &> /dev/null && echo "  → C11 (10.0.1.36): Success" || echo "  → C11 (10.0.1.36): Failure"
-docker exec -i clab-3R-3S-12C-topology-C9 ping -c 1 -W 1 10.0.1.37 &> /dev/null && echo "  → C12 (10.0.1.37): Success" || echo "  → C12 (10.0.1.37): Failure"
-echo
-echo "From C10:"
-docker exec -i clab-3R-3S-12C-topology-C10 ping -c 1 -W 1 10.0.1.2 &> /dev/null && echo "  → C1 (10.0.1.2): Success" || echo "  → C1 (10.0.1.2): Failure"
-docker exec -i clab-3R-3S-12C-topology-C10 ping -c 1 -W 1 10.0.1.3 &> /dev/null && echo "  → C2 (10.0.1.3): Success" || echo "  → C2 (10.0.1.3): Failure"
-docker exec -i clab-3R-3S-12C-topology-C10 ping -c 1 -W 1 10.0.1.4 &> /dev/null && echo "  → C3 (10.0.1.4): Success" || echo "  → C3 (10.0.1.4): Failure"
-docker exec -i clab-3R-3S-12C-topology-C10 ping -c 1 -W 1 10.0.1.5 &> /dev/null && echo "  → C4 (10.0.1.5): Success" || echo "  → C4 (10.0.1.5): Failure"
-docker exec -i clab-3R-3S-12C-topology-C10 ping -c 1 -W 1 10.0.1.18 &> /dev/null && echo "  → C5 (10.0.1.18): Success" || echo "  → C5 (10.0.1.18): Failure"
-docker exec -i clab-3R-3S-12C-topology-C10 ping -c 1 -W 1 10.0.1.19 &> /dev/null && echo "  → C6 (10.0.1.19): Success" || echo "  → C6 (10.0.1.19): Failure"
-docker exec -i clab-3R-3S-12C-topology-C10 ping -c 1 -W 1 10.0.1.20 &> /dev/null && echo "  → C7 (10.0.1.20): Success" || echo "  → C7 (10.0.1.20): Failure"
-docker exec -i clab-3R-3S-12C-topology-C10 ping -c 1 -W 1 10.0.1.21 &> /dev/null && echo "  → C8 (10.0.1.21): Success" || echo "  → C8 (10.0.1.21): Failure"
-docker exec -i clab-3R-3S-12C-topology-C10 ping -c 1 -W 1 10.0.1.34 &> /dev/null && echo "  → C9 (10.0.1.34): Success" || echo "  → C9 (10.0.1.34): Failure"
-docker exec -i clab-3R-3S-12C-topology-C10 ping -c 1 -W 1 10.0.1.36 &> /dev/null && echo "  → C11 (10.0.1.36): Success" || echo "  → C11 (10.0.1.36): Failure"
-docker exec -i clab-3R-3S-12C-topology-C10 ping -c 1 -W 1 10.0.1.37 &> /dev/null && echo "  → C12 (10.0.1.37): Success" || echo "  → C12 (10.0.1.37): Failure"
-echo
-echo "From C11:"
-docker exec -i clab-3R-3S-12C-topology-C11 ping -c 1 -W 1 10.0.1.2 &> /dev/null && echo "  → C1 (10.0.1.2): Success" || echo "  → C1 (10.0.1.2): Failure"
-docker exec -i clab-3R-3S-12C-topology-C11 ping -c 1 -W 1 10.0.1.3 &> /dev/null && echo "  → C2 (10.0.1.3): Success" || echo "  → C2 (10.0.1.3): Failure"
-docker exec -i clab-3R-3S-12C-topology-C11 ping -c 1 -W 1 10.0.1.4 &> /dev/null && echo "  → C3 (10.0.1.4): Success" || echo "  → C3 (10.0.1.4): Failure"
-docker exec -i clab-3R-3S-12C-topology-C11 ping -c 1 -W 1 10.0.1.5 &> /dev/null && echo "  → C4 (10.0.1.5): Success" || echo "  → C4 (10.0.1.5): Failure"
-docker exec -i clab-3R-3S-12C-topology-C11 ping -c 1 -W 1 10.0.1.18 &> /dev/null && echo "  → C5 (10.0.1.18): Success" || echo "  → C5 (10.0.1.18): Failure"
-docker exec -i clab-3R-3S-12C-topology-C11 ping -c 1 -W 1 10.0.1.19 &> /dev/null && echo "  → C6 (10.0.1.19): Success" || echo "  → C6 (10.0.1.19): Failure"
-docker exec -i clab-3R-3S-12C-topology-C11 ping -c 1 -W 1 10.0.1.20 &> /dev/null && echo "  → C7 (10.0.1.20): Success" || echo "  → C7 (10.0.1.20): Failure"
-docker exec -i clab-3R-3S-12C-topology-C11 ping -c 1 -W 1 10.0.1.21 &> /dev/null && echo "  → C8 (10.0.1.21): Success" || echo "  → C8 (10.0.1.21): Failure"
-docker exec -i clab-3R-3S-12C-topology-C11 ping -c 1 -W 1 10.0.1.34 &> /dev/null && echo "  → C9 (10.0.1.34): Success" || echo "  → C9 (10.0.1.34): Failure"
-docker exec -i clab-3R-3S-12C-topology-C11 ping -c 1 -W 1 10.0.1.35 &> /dev/null && echo "  → C10 (10.0.1.35): Success" || echo "  → C10 (10.0.1.35): Failure"
-docker exec -i clab-3R-3S-12C-topology-C11 ping -c 1 -W 1 10.0.1.37 &> /dev/null && echo "  → C12 (10.0.1.37): Success" || echo "  → C12 (10.0.1.37): Failure"
-echo
-echo "From C12:"
-docker exec -i clab-3R-3S-12C-topology-C12 ping -c 1 -W 1 10.0.1.2 &> /dev/null && echo "  → C1 (10.0.1.2): Success" || echo "  → C1 (10.0.1.2): Failure"
-docker exec -i clab-3R-3S-12C-topology-C12 ping -c 1 -W 1 10.0.1.3 &> /dev/null && echo "  → C2 (10.0.1.3): Success" || echo "  → C2 (10.0.1.3): Failure"
-docker exec -i clab-3R-3S-12C-topology-C12 ping -c 1 -W 1 10.0.1.4 &> /dev/null && echo "  → C3 (10.0.1.4): Success" || echo "  → C3 (10.0.1.4): Failure"
-docker exec -i clab-3R-3S-12C-topology-C12 ping -c 1 -W 1 10.0.1.5 &> /dev/null && echo "  → C4 (10.0.1.5): Success" || echo "  → C4 (10.0.1.5): Failure"
-docker exec -i clab-3R-3S-12C-topology-C12 ping -c 1 -W 1 10.0.1.18 &> /dev/null && echo "  → C5 (10.0.1.18): Success" || echo "  → C5 (10.0.1.18): Failure"
-docker exec -i clab-3R-3S-12C-topology-C12 ping -c 1 -W 1 10.0.1.19 &> /dev/null && echo "  → C6 (10.0.1.19): Success" || echo "  → C6 (10.0.1.19): Failure"
-docker exec -i clab-3R-3S-12C-topology-C12 ping -c 1 -W 1 10.0.1.20 &> /dev/null && echo "  → C7 (10.0.1.20): Success" || echo "  → C7 (10.0.1.20): Failure"
-docker exec -i clab-3R-3S-12C-topology-C12 ping -c 1 -W 1 10.0.1.21 &> /dev/null && echo "  → C8 (10.0.1.21): Success" || echo "  → C8 (10.0.1.21): Failure"
-docker exec -i clab-3R-3S-12C-topology-C12 ping -c 1 -W 1 10.0.1.34 &> /dev/null && echo "  → C9 (10.0.1.34): Success" || echo "  → C9 (10.0.1.34): Failure"
-docker exec -i clab-3R-3S-12C-topology-C12 ping -c 1 -W 1 10.0.1.35 &> /dev/null && echo "  → C10 (10.0.1.35): Success" || echo "  → C10 (10.0.1.35): Failure"
-docker exec -i clab-3R-3S-12C-topology-C12 ping -c 1 -W 1 10.0.1.36 &> /dev/null && echo "  → C11 (10.0.1.36): Success" || echo "  → C11 (10.0.1.36): Failure"
-echo
+
+TOPOLOGY="clab-3R-3S-12C-topology"
+
+# Define client IP groups
+C1_IPS=("10.0.1.3" "10.0.1.4" "10.0.1.5" \
+        "10.0.2.2" "10.0.2.3" "10.0.2.4" "10.0.2.5" \
+        "10.0.3.2" "10.0.3.3" "10.0.3.4" "10.0.3.5")
+
+ping_test() {
+  SRC=$1
+  DST_IP=$2
+  DST_NAME=$3
+  docker exec -i $TOPOLOGY-$SRC ping -c 1 -W 1 $DST_IP &> /dev/null && \
+    echo "  → $DST_NAME ($DST_IP): Success" || \
+    echo "  → $DST_NAME ($DST_IP): Failure"
+}
+
+test_from_client() {
+  SRC=$1
+  SRC_IP=$2
+  echo "From $SRC:"
+  for DST_IP in "${ALL_IPS[@]}"; do
+    # Skip itself
+    if [[ "$DST_IP" == "$SRC_IP" ]]; then continue; fi
+    # Derive client name from IP
+    DST_NAME="C$(echo $DST_IP | awk -F'.' '{print $4-1}')"
+    ping_test $SRC $DST_IP $DST_NAME
+  done
+  echo
+}
+
+# All IPs of clients
+ALL_IPS=("10.0.1.2" "10.0.1.3" "10.0.1.4" "10.0.1.5"
+         "10.0.2.2" "10.0.2.3" "10.0.2.4" "10.0.2.5"
+         "10.0.3.2" "10.0.3.3" "10.0.3.4" "10.0.3.5")
+
+# Client name → IP mapping
+CLIENT_IPS=(
+  "C1:10.0.1.2"
+  "C2:10.0.1.3"
+  "C3:10.0.1.4"
+  "C4:10.0.1.5"
+  "C5:10.0.2.2"
+  "C6:10.0.2.3"
+  "C7:10.0.2.4"
+  "C8:10.0.2.5"
+  "C9:10.0.3.2"
+  "C10:10.0.3.3"
+  "C11:10.0.3.4"
+  "C12:10.0.3.5"
+)
+
+# Loop each client and test connectivity to all others
+for ENTRY in "${CLIENT_IPS[@]}"; do
+  CLIENT_NAME=$(echo "$ENTRY" | cut -d':' -f1)
+  CLIENT_IP=$(echo "$ENTRY" | cut -d':' -f2)
+  test_from_client $CLIENT_NAME $CLIENT_IP
+done

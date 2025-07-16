@@ -3,72 +3,72 @@ S1:
     username: admin
     password: admin
     platform: arista_ceos
-    hostname: 172.20.20.97
+    hostname: 172.20.20.94
 S2:
     username: admin
     password: admin
     platform: arista_ceos
-    hostname: 172.20.20.105
+    hostname: 172.20.20.97
 S3:
     username: admin
     password: admin
     platform: arista_ceos
-    hostname: 172.20.20.101
+    hostname: 172.20.20.88
 C1:
     username: 
     password: 
     platform: linux
-    hostname: 172.20.20.100
+    hostname: 172.20.20.101
 C10:
     username: 
     password: 
     platform: linux
-    hostname: 172.20.20.104
+    hostname: 172.20.20.92
 C11:
     username: 
     password: 
     platform: linux
-    hostname: 172.20.20.89
+    hostname: 172.20.20.100
 C12:
     username: 
     password: 
     platform: linux
-    hostname: 172.20.20.93
+    hostname: 172.20.20.99
 C2:
     username: 
     password: 
     platform: linux
-    hostname: 172.20.20.96
+    hostname: 172.20.20.91
 C3:
     username: 
     password: 
     platform: linux
-    hostname: 172.20.20.95
+    hostname: 172.20.20.93
 C4:
     username: 
     password: 
     platform: linux
-    hostname: 172.20.20.92
+    hostname: 172.20.20.105
 C5:
     username: 
     password: 
     platform: linux
-    hostname: 172.20.20.91
+    hostname: 172.20.20.90
 C6:
     username: 
     password: 
     platform: linux
-    hostname: 172.20.20.99
+    hostname: 172.20.20.95
 C7:
     username: 
     password: 
     platform: linux
-    hostname: 172.20.20.90
+    hostname: 172.20.20.104
 C8:
     username: 
     password: 
     platform: linux
-    hostname: 172.20.20.88
+    hostname: 172.20.20.89
 C9:
     username: 
     password: 
@@ -78,14 +78,14 @@ R1:
     username: 
     password: 
     platform: linux
-    hostname: 172.20.20.102
+    hostname: 172.20.20.96
 R2:
     username: 
     password: 
     platform: linux
-    hostname: 172.20.20.94
+    hostname: 172.20.20.103
 R3:
     username: 
     password: 
     platform: linux
-    hostname: 172.20.20.103
+    hostname: 172.20.20.102
